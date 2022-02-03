@@ -67,13 +67,18 @@ console.log(personInfo);
 let males = arrayOfPersons.filter(person => person.gender === "male")
 console.log(males);
 
-// let eightiesBaybeesHeeey = (array) => {
-//     for (const person of arrayOfPersons) {
-//         person.birthDate);
-//     } 
-// }
+let eightiesBaybeesHeeey = (array) => {
 
+    for (let i = 0; i < array.length; i++) {
+        if (Date.parse(array[i].birthDate) < Date.parse("January 1, 1990")) {
+            return array[i];
+        }   else {
+            return "No Eighties Baybays";
+        }
+    }
+}
 
+console.log(eightiesBaybeesHeeey(arrayOfPersons));
 
 // .find
 
